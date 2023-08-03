@@ -32,7 +32,6 @@ No modules.
 | [google_project_service.firestore_api](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
 | [google_service_account.dashboard_sa](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
 | [google_service_account.server_sa](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
-| [google_service_account_id_token.oidc](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/service_account_id_token) | data source |
 
 ## Inputs
 
