@@ -1,9 +1,15 @@
+resource "google_service_account" "server_sa" {
+  account_id   = "slurp-server-sa"
+  display_name = "Slurp Server SA"
+}
+
 resource "google_cloud_run_service" "slurp_server" {
   location = var.gcp_region
   name     = "slurp-server"
 
   template {
     spec {
+      service_account_name = google_service_account.server_sa.email
       containers {
         image = "gofx/slurp-server"
         env {
@@ -27,6 +33,20 @@ resource "google_cloud_run_service" "slurp_server" {
     latest_revision = true
   }
 
+  depends_on = [google_project_service.firestore_api]
+}
+
+resource "google_cloud_run_service_iam_member" "server_sa_binding" {
+  location = google_cloud_run_service.slurp_server.location
+  member   = "serviceAccount:${google_service_account.server_sa.email}"
+  role     = "roles/run.invoker"
+  service  = google_cloud_run_service.slurp_server.name
+}
+
+resource "google_project_iam_member" "slurp_server_firestore_binding" {
+  project = var.gcp_project_id
+  role    = "roles/datastore.user"
+  member  = "serviceAccount:${google_service_account.server_sa.email}"
 }
 
 resource "google_service_account" "dashboard_sa" {
