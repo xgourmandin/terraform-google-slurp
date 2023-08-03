@@ -14,6 +14,6 @@ output "slurp_dashboard_endpoint" {
 }
 
 output "slurp_dashboard_sa_email" {
-  value = length(var.dashboard_service_account) > 0 ? var.dashboard_service_account : google_service_account.dashboard_sa.email
+  value = length(var.dashboard_service_account) > 0 ? var.dashboard_service_account : google_service_account.dashboard_sa[0].email
   description = "Service account email used to run Slurp Dashboard Cloud Run"
 }
