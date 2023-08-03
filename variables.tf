@@ -59,12 +59,12 @@ variable "api_configurations" {
     additional_queryparams = optional(map(string))
     output = optional(object({
       type       = string
-      filename   = string
-      bucket     = string
-      project    = string
-      dataset    = string
-      table      = string
-      autodetect = bool
+      filename   = optional(string)
+      bucket     = optional(string)
+      project    = optional(string)
+      dataset    = optional(string)
+      table      = optional(string)
+      autodetect = optional(bool)
     }))
   }))
 
