@@ -49,8 +49,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_slurp_dashboard_endpoint"></a> [slurp\_dashboard\_endpoint](#output\_slurp\_dashboard\_endpoint) | n/a |
-| <a name="output_slurp_dashboard_sa_email"></a> [slurp\_dashboard\_sa\_email](#output\_slurp\_dashboard\_sa\_email) | n/a |
-| <a name="output_slurp_server_endpoint"></a> [slurp\_server\_endpoint](#output\_slurp\_server\_endpoint) | n/a |
-| <a name="output_slurp_server_sa_email"></a> [slurp\_server\_sa\_email](#output\_slurp\_server\_sa\_email) | n/a |
+| <a name="output_slurp_dashboard_endpoint"></a> [slurp\_dashboard\_endpoint](#output\_slurp\_dashboard\_endpoint) | Slurp Dashboard Cloud Run URL |
+| <a name="output_slurp_dashboard_sa_email"></a> [slurp\_dashboard\_sa\_email](#output\_slurp\_dashboard\_sa\_email) | Service account email used to run Slurp Dashboard Cloud Run |
+| <a name="output_slurp_server_endpoint"></a> [slurp\_server\_endpoint](#output\_slurp\_server\_endpoint) | Slurp server Cloud Run URL |
+| <a name="output_slurp_server_sa_email"></a> [slurp\_server\_sa\_email](#output\_slurp\_server\_sa\_email) | Service account email used to run Slurp Server Cloud Run |
 <!-- END_TF_DOCS -->
